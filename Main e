@@ -3623,38 +3623,3 @@ k:AdjustSpeed(1)
 end)
 
 
-OtherSection:NewButton("Sword Chandelier", "Chandelier made of sword's", function()
-    local player = game.Players.LocalPlayer
-local mouse = player:GetMouse()
-local backpack = player.Backpack
-local char = player.Character
-local hrp = char.HumanoidRootPart
-local hum = char.Humanoid
-local tween = game:GetService("TweenService")
-
-function gatherswords()
-    local swords = {}
-    for i, v in pairs(backpack:GetChildren())do
-        if(v:IsA"Tool")then
-            table.insert(swords,v)
-        end
-    end
-    for i, v in pairs(char:GetChildren())do
-        if(v:IsA"Tool")then
-            table.insert(swords,v)
-        end
-    end
-    return swords
-end
-
-local swords = gatherswords()
-
-for i, sword in pairs(swords) do
-    if(i~=#swords)then
-        sword.Parent = backpack
-        sword.Handle.Massless = true
-        sword.Grip = (sword.Grip*CFrame.new(0, 5, 0)) * CFrame.Angles(2, (6.38/(#swords-1))*i, 0)
-    end
-    sword.Parent = char
-end
-end)
