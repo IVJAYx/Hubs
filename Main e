@@ -3623,7 +3623,7 @@ k:AdjustSpeed(1)
 end)
 
 
-Section:NewButton("Sword Chandelier", "Chandelier made of sword's", function()
+OtherSection:NewButton("Sword Chandelier", "Chandelier made of sword's", function()
     local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
 local backpack = player.Backpack
