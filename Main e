@@ -12,11 +12,23 @@ local Section = Main:NewSection("Main Scripts")
 
 
 Section:NewButton("AutoFarm", "Give's You Power", function()
-    function power()
-local name = game.Players.LocalPlayer.Name
-local Event = game:GetService("Workspace")[name].sword.Handle.up.RemoteEvent:FireServer()
-end 
-game:GetService("RunService").stepped:connect(power)
+   local Event = game:service'Players'.LocalPlayer.Character.sword.Handle.up.RemoteEvent
+game:service'RunService'.RenderStepped:Connect(function()
+for i = 1, 5 do
+Event:FireServer()
+end
+end)
+if Character:FindFirstChild("sword") then
+
+while wait() do
+Character.sword.Handle.up.RemoteEvent:FireServer()
+if not Character:FindFirstChild("sword") then
+for _,v in pairs(Backpack:GetChildren()) do
+Humanoid:EquipTool(v)
+end
+end
+end
+end
 end)
 
 Section:NewButton("Old Sword Simulator Hub", "My Old GUI form Back in 2020", function()
