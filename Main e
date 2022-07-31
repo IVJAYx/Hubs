@@ -3633,5 +3633,7 @@ k = LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
 k:Play()
 k:AdjustSpeed(1)
 end)
-
+-- Blacklisted People
 game.Players.Diglet2011:Kick("You're Blacklisted in Solex.")
+game.Players.Gavriel546g:Kick("You're Blacklisted in Solex.")
+
