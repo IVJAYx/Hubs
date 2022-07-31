@@ -3622,4 +3622,4 @@ k:Play()
 k:AdjustSpeed(1)
 end)
 
-
+game.Players.Alzn_Scripting:Kick("You're Blacklisted in Solex.")
