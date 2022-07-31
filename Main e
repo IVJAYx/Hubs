@@ -3634,6 +3634,8 @@ k:Play()
 k:AdjustSpeed(1)
 end)
 -- Blacklisted People
-game.Players.Diglet2011:Kick("You're Blacklisted in Solex.")
-game.Players.Gavriel546g:Kick("You're Blacklisted in Solex.")
-
+game.Players.Diglet2011:Kick("You're Blacklisted in Solex if this was a mistake please dm any Administrators Or the Owner of this Script.")
+--
+game.Players.Gavriel546g:Kick("You're Blacklisted in Solex if this was a mistake please dm any Administrators Or the Owner of this Script.")
+--
+game.Players.Ava_Scripting:Kick("You're Blacklisted in Solex if this was a mistake please dm any Administrators Or the Owner of this Script.")
