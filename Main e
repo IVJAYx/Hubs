@@ -4,13 +4,12 @@ local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.S
 Event:FireServer(A_1, A_2)
 -- Main Script Code
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Demon Hub Blood (7/31/2022)", "BloodTheme")
+local Window = Library.CreateLib("Demon Hub Blood (8/2/2022)", "BloodTheme")
 
 --Main
 local Main = Window:NewTab("Main")
 local Section = Main:NewSection("Main Scripts")
-
-
+-- Scripts
 Section:NewButton("AutoFarm", "Give's You Power", function()
    local Event = game:service'Players'.LocalPlayer.Character.sword.Handle.up.RemoteEvent
 game:service'RunService'.RenderStepped:Connect(function()
@@ -3517,6 +3516,15 @@ for it, vt in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 end
 end)
 
+-- Other Hub
+local Tab = Window:NewTab("Premium Hub")
+local TabSection = Tab:NewSection("Sword Form's Beta.")
+
+-- Evil Script.
+TabSection:NewButton("Zsycho Premium Hub 0.2", ":)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Demon1131/Hubs/main/Zsycho%20Premium%20Hub",true))()
+end)
+
 OtherSection:NewButton("Dark Dex", "Dex explorer", function()
     local Dex = rawget(game:GetObjects("rbxassetid://3567096419"), 0X1)
 if type(syn) == "table" and type(syn.protect_gui) == "function" then
@@ -3621,7 +3629,7 @@ end
 if tool.Handle.Mesh then
 tool.Handle.Mesh:Destroy()
 end
-if index <= 18 then
+if index <= 28 then
 tool.Parent = LocalPlayer.Character
 end
 wait()
@@ -3636,5 +3644,6 @@ end)
 
 game.Players.nezuko23155:Kick("You're Blacklisted in Solex if this was a mistake please dm any Administrator/Admin Thank You")
 
-
 game.Players.Diglet2011:Kick("You're Blacklisted in Solex if this was a mistake please dm any Administrator/Admin Thank You")
+
+game.Players.EzPower221:Kick("You're Blacklisted in Solex if this was a mistake please dm any Administrator/Admin Thank You")
