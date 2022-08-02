@@ -1,0 +1,423 @@
+local A_1 = game.Players.LocalPlayer.name.." [Alzn's Zsycho Premium Hub 0.2]"-----message here
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+-----message -----
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Solex Premium 0.2", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = true
+})
+
+Tab:AddButton({
+	Name = "Sword Form 1 :Note You will need 50 swords",
+	Callback = function()
+      		local player = game.Players.LocalPlayer
+local character = player.Character
+local backpack = player.Backpack
+local swords = {}
+function look(dir)
+    for i, v in pairs(dir:GetChildren()) do
+        if(v:IsA("Tool"))then
+            table.insert(swords,v)
+        end
+    end
+end
+look(backpack)
+look(character)
+    local oldswords = swords
+    local newswords = {}
+    for i = 1, 50 do
+        newswords[i] = oldswords[i]
+    end
+    local swords = newswords
+    local quotient = math.floor(#swords/6)
+    local counter = 13
+    local counter = 15
+    for i = 1, 62 do
+        local max = math.floor(#swords/6*i)+1
+        local min = math.floor(#swords/62*(i-1))
+        local diff = max-min
+        for x = 1, math.sqrt(quotient)do
+            for y = 1, math.sqrt(quotient)do
+                local sword = swords[counter]
+                sword.Parent = player.Backpack
+                sword.Grip = CFrame.new(20,0,0)*CFrame.Angles(0,1.57,0)if(x==math.floor(math.sqrt(quotient)) and i<5)then
+                    sword.Grip = sword.Grip*CFrame.Angles(0,-1.57/2,0)*CFrame.new(-1,0,-1)
+                end
+                sword.Grip = sword.Grip*CFrame.new(x*3.5,y*-3.5,8.75)*CFrame.new(-8.75,15,0)
+                if(i==2)then
+                    sword.Grip = sword.Grip*CFrame.Angles(0,1.57,0)
+                elseif(i==3)then
+                    sword.Grip = sword.Grip*CFrame.Angles(0,3.14,0)
+                elseif(i==4)then
+                    sword.Grip = sword.Grip*CFrame.Angles(0,3.14+1.57,0)
+                elseif(i==5)then
+                    sword.Grip = sword.Grip*CFrame.Angles(-1.57,0,0)*CFrame.new(-1.75,0,-1)
+                elseif(i==6)then
+                    sword.Grip = sword.Grip*CFrame.Angles(1.57,0,0)*CFrame.new(-1.75,2,1)
+                end
+                sword.Grip = sword.Grip*CFrame.new(1.7,-6.8 ,-2.3)
+                sword.Parent = player.Character
+                counter = counter + 1
+            end
+        end
+    end
+    
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Sword Form 2",
+	Callback = function()
+      		local player = game.Players.LocalPlayer
+local character = player.Character
+local backpack = player.Backpack
+local swords = {}
+function look(dir)
+    for i, v in pairs(dir:GetChildren()) do
+        if(v:IsA("Tool"))then
+            table.insert(swords,v)
+        end
+    end
+end
+look(backpack)
+look(character)
+    local oldswords = swords
+    local newswords = {}
+    for i = 1, 150 do
+        newswords[i] = oldswords[i]
+    end
+    local swords = newswords
+    local quotient = math.floor(#swords/6)
+    local counter = 1
+    local counter = 1
+    for i = 1, 6 do
+        local max = math.floor(#swords/6*i)+1
+        local min = math.floor(#swords/6*(i-1))
+        local diff = max-min
+        for x = 1, math.sqrt(quotient)do
+            for y = 1, math.sqrt(quotient)do
+                local sword = swords[counter]
+                sword.Parent = player.Backpack
+                sword.Grip = CFrame.new(0,0,0)*CFrame.Angles(0,1.57,0)if(x==math.floor(math.sqrt(quotient)) and i<5)then
+                    sword.Grip = sword.Grip*CFrame.Angles(0,-1.57/2,0)*CFrame.new(-1,0,-1)
+                end
+                sword.Grip = sword.Grip*CFrame.new(x*3.5,y*-3.5,8.75)*CFrame.new(-8.75,15,0)
+                if(i==2)then
+                    sword.Grip = sword.Grip*CFrame.Angles(0,1.57,0)
+                elseif(i==3)then
+                    sword.Grip = sword.Grip*CFrame.Angles(0,3.14,0)
+                elseif(i==4)then
+                    sword.Grip = sword.Grip*CFrame.Angles(0,3.14+1.57,0)
+                elseif(i==5)then
+                    sword.Grip = sword.Grip*CFrame.Angles(-1.57,0,0)*CFrame.new(-1.75,0,-1)
+                elseif(i==6)then
+                    sword.Grip = sword.Grip*CFrame.Angles(1.57,0,0)*CFrame.new(-1.75,2,1)
+                end
+                sword.Grip = sword.Grip*CFrame.new(1.7,-6.8 ,-2.3)
+                sword.Parent = player.Character
+                counter = counter + 5
+            end
+        end
+    end
+    
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Sword Form 3",
+	Callback = function()
+      		local player = game.Players.LocalPlayer
+local character = player.Character
+local backpack = player.Backpack
+local swords = {}
+function look(dir)
+    for i, v in pairs(dir:GetChildren()) do
+        if(v:IsA("Tool"))then
+            table.insert(swords,v)
+        end
+    end
+end
+look(backpack)
+look(character)
+    
+    for i = 1, math.floor(#swords/1)-1 do
+        local sword = swords[i]
+        sword.Parent = player.Backpack
+        sword.Grip = CFrame.new(4,31.2,0)*CFrame.Angles((21.4/(#swords/2)*i)+0.8,0,0)*CFrame.new(0,-5.7,0)
+        sword.Parent = player.Character
+    end
+    for i = math.floor(#swords,2), #swords-4 do
+        local sword = swords[i]
+        sword.Parent = player.Backpack
+        sword.Grip = CFrame.new(0,1.2,0)*CFrame.Angles(21.4/(#swords/2)*(i-math.floor(#swords/2))+4.06,0,0)*CFrame.new(0,-5.7,0)
+        sword.Parent = player.Character
+    end
+    local last = swords[#swords]
+    last.Parent = player.Backpack
+    last.Grip = CFrame.new(0,0,0)
+    last.Parent = player.Character 
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Sword Form 4",
+	Callback = function()
+      		
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+local char = player.Character
+local hum = char.Humanoid
+
+local UIS = game:GetService("UserInputService")
+
+local focused = false
+UIS.TextBoxFocused:Connect(function()
+    focused = true
+end)
+UIS.TextBoxFocusReleased:Connect(function()
+    focused = false
+end)
+
+function getSwords()
+    local swords = {}
+    for i, sword in pairs(player.Character:GetChildren())do
+        if(sword:IsA("Tool"))then
+            table.insert(swords, sword)
+        end
+    end
+    for i, sword in pairs(player.Backpack:GetChildren())do
+        if(sword:IsA("Tool"))then
+            table.insert(swords, sword)
+        end
+    end
+    return swords
+end
+
+local animated = true
+local flying = false
+local sprinting = false
+UIS.InputBegan:connect(function(k)
+    if not(focused)then
+        k = k.KeyCode
+        if(k==Enum.KeyCode.G)then
+            animated = false
+        elseif(k==Enum.KeyCode.F)then
+            if(animated)then animated = false else animated = true end
+        elseif(k==Enum.KeyCode.LeftShift and animated)then
+            if(sprinting)then
+                sprinting = false
+                hum.WalkSpeed = 8
+                applyData({angle = 0.5, value = 0.5})
+            else
+                sprinting = true
+                hum.WalkSpeed = 30
+                applyData({angle = 1.57, value = 0.7})
+            end
+        end
+    end
+end)
+
+swords = getSwords()
+local half = math.floor(#swords/2)
+
+function applyData(wingData)
+    for i = 1, half do
+        sword = swords[i]
+        sword.Parent = player.Backpack
+        sword.Grip = CFrame.new(-3.5,0,0)*CFrame.Angles(3.14,0,0)
+        sword.Grip = sword.Grip*CFrame.Angles(((wingData.angle/half)*i)+wingData.value,1.57,0)
+        sword.Grip = sword.Grip*CFrame.new(1.7,0,0)
+        sword.Parent = player.Character
+    end
+    for i = half+1, #swords do
+        sword = swords[i]
+        sword.Parent = player.Backpack
+        sword.Grip = CFrame.new(-3.5,0,0)*CFrame.Angles(3.14,0,0)
+        sword.Grip = sword.Grip*CFrame.Angles(-(((wingData.angle/half)*(i-half))+wingData.value),1.57,0)
+        sword.Grip = sword.Grip*CFrame.new(1.7,0,0)
+        sword.Parent = player.Character
+    end
+end
+
+applyData({angle = 0.5, value = 0.5})
+
+char.Humanoid.StateChanged:Connect(function(old, new)
+    if(animated)then
+        if(new==Enum.HumanoidStateType.Freefall)then
+            flying = true
+            applyData({angle = 1.57, value = 0.7})
+            workspace.Gravity = 50
+            hum.WalkSpeed = 70
+        elseif(new==Enum.HumanoidStateType.Landed)then
+            flying = false
+            workspace.Gravity = 196.19999694824
+            if(sprinting)then
+                hum.WalkSpeed = 30
+            else
+                hum.WalkSpeed = 8
+                applyData({angle = 0.5, value = 0.5})
+            end
+        end
+    end
+end)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Sword Form 5",
+	Callback = function()
+      		local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+local backpack = player.Backpack
+local char = player.Character
+local hrp = char.HumanoidRootPart
+local hum = char.Humanoid
+local tween = game:GetService("TweenService")
+
+function gatherswords()
+    local swords = {}
+    for i, v in pairs(backpack:GetChildren())do
+        if(v:IsA"Tool")then
+            table.insert(swords,v)
+        end
+    end
+    for i, v in pairs(char:GetChildren())do
+        if(v:IsA"Tool")then
+            table.insert(swords,v)
+        end
+    end
+    return swords
+end
+
+local swords = gatherswords()
+
+for i, sword in pairs(swords) do
+    if(i~=#swords)then
+        sword.Parent = backpack
+        sword.Handle.Massless = true
+        sword.Grip = (sword.Grip*CFrame.new(9,8,-0.2)) * CFrame.Angles(0, (5.45/(#swords-1))*i, 0)
+    end
+    sword.Parent = char
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Sword Form 6",
+	Callback = function()
+      		local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+local backpack = player.Backpack
+local char = player.Character
+local hrp = char.HumanoidRootPart
+local hum = char.Humanoid
+local tween = game:GetService("TweenService")
+
+function gatherswords()
+    local swords = {}
+    for i, v in pairs(backpack:GetChildren())do
+        if(v:IsA"Tool")then
+            table.insert(swords,v)
+        end
+    end
+    for i, v in pairs(char:GetChildren())do
+        if(v:IsA"Tool")then
+            table.insert(swords,v)
+        end
+    end
+    return swords
+end
+
+local swords = gatherswords()
+
+for i, sword in pairs(swords) do
+    if(i~=#swords)then
+        sword.Parent = backpack
+        sword.Handle.Massless = true
+        sword.Grip = (sword.Grip*CFrame.new(3,4,-0.2)) * CFrame.Angles(0, (2.48/(#swords-1))*i, 0)
+    end
+    sword.Parent = char
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Sword Form 7",
+	Callback = function()
+      		while true do
+local player = game.Players.LocalPlayer
+local character = player.Character
+local backpack = player.Backpack
+local swords = {}
+function look(dir)
+    for i, v in pairs(dir:GetChildren()) do
+        if(v:IsA("Tool"))then
+            table.insert(swords,v)
+        end
+    end
+end
+look(backpack)
+look(character)
+    
+for i, v in pairs(swords)do
+    local sword             = v
+    sword.Parent            = backpack
+    sword.Handle.Massless   = true
+    sword.Handle.CanCollide = true
+    sword.Grip              = (sword.Grip*CFrame.Angles(1.50,0,0))*CFrame.new(0,0,0.5*(i-1))
+    sword.Parent            = character
+    sword.Handle.Touched:Connect(function(t)
+        if(t.Parent)and(t.Parent:FindFirstChild("Humanoid"))and(t.Parent.Name~=player.Name)then
+            sword.Handle.dmg.RemoteEvent:FireServer(t.Parent.Humanoid, math.huge)
+        end
+    end)
+end
+    wait(0.1)
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Sword Form 8",
+	Callback = function()
+      		local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+local backpack = player.Backpack
+local char = player.Character
+local hrp = char.HumanoidRootPart
+local hum = char.Humanoid
+local tween = game:GetService("TweenService")
+
+function gatherswords()
+    local swords = {}
+    for i, v in pairs(backpack:GetChildren())do
+        if(v:IsA"Tool")then
+            table.insert(swords,v)
+        end
+    end
+    for i, v in pairs(char:GetChildren())do
+        if(v:IsA"Tool")then
+            table.insert(swords,v)
+        end
+    end
+    return swords
+end
+
+local swords = gatherswords()
+
+for i, sword in pairs(swords) do
+    if(i~=#swords)then
+        sword.Parent = backpack
+        sword.Handle.Massless = true
+        sword.Grip = (sword.Grip*CFrame.new(1,8,-7.5-2)) * CFrame.Angles(0, (6.28/(#swords-1))*i, 0)
+    end
+    sword.Parent = char
+end
+  	end    
+})
