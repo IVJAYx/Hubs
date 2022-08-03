@@ -62,22 +62,23 @@
 	God.Position = UDim2.new(0.0256959312, 0, 0.225322485, 0)
 	God.Size = UDim2.new(0, 200, 0, 50)
 	God.Font = Enum.Font.GothamBlack
-	God.Text = "Op God Mode"
+	God.Text = "God Player"
 	God.TextColor3 = Color3.fromRGB(255, 255, 255)
 	God.TextScaled = true
 	God.TextSize = 14.000
 	God.TextWrapped = true
 	God.MouseButton1Down:Connect(function()
+			while true do
+		wait()
 		if game.Players.LocalPlayer.Backpack:FindFirstChild("sword") then
-			game.Players.LocalPlayer.Backpack.sword.Handle.dmg.RemoteEvent:FireServer(game.Players.LocalPlayer.Character.Humanoid, - math.huge)
-			wait(0.4)
-		else
-			game.Players.LocalPlayer.Character:FindFirstChild("sword").Handle.dmg.RemoteEvent:FireServer(game.Players.LocalPlayer.Character.Humanoid, - math.huge)
-		end
-		while wait() do
-			game.Players.LocalPlayer.Character.Humanoid.Health = "-nan(ind)"
-			game.Players.LocalPlayer.Character.pvp:Destroy()
-		end
+			if game.Workspace[TextBox.Text].Humanoid.Health > -999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 then
+				game.Players.LocalPlayer.Backpack.sword.Parent = game.Players.LocalPlayer.Character
+				game.Players.LocalPlayer.Character.sword.Handle.dmg.RemoteEvent:FireServer(game.Workspace[TextBox.Text].Humanoid, - math.huge)
+				game.Players.LocalPlayer.Character.sword.Parent = game.Players.LocalPlayer.Backpack
+				print("lol ez")
+		end 
+	end
+	end
 	end)
 
 	UICorner_3.CornerRadius = UDim.new(0, 11)
