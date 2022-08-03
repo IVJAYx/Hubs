@@ -449,3 +449,50 @@ SexTab:AddButton({
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Demon1131/Hubs/main/God%20Giver",true))()
   	end    
 })
+
+SexTab:AddButton({
+	Name = "Sword Guard",
+	Callback = function()
+    local sword = game:GetService("Players").LocalPlayer.Backpack.sword
+		local Handle = sword.Handle
+	
+		local RS = game:GetService("RunService")
+	
+		for i, v in pairs(sword:GetDescendants())do
+			if(v:IsA("BasePart"))then
+				v.CanCollide = false
+			end
+		end
+	
+		function givePet (player)
+			if player then
+				local character = player.Character
+				if character then
+					local humRootPart = character.HumanoidRootPart
+					local newPet = Handle
+					print("I'll Protect You -- Sword")
+					newPet.Parent = character
+	
+					local bodyPos = Instance.new("BodyPosition", newPet)
+					bodyPos.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+	
+					local bodyGyro = Instance.new("BodyGyro", newPet)
+					bodyGyro.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+	
+					while true do
+						bodyPos.Position = humRootPart.Position + Vector3.new(-1, 5, -2)
+						bodyGyro.CFrame = humRootPart.CFrame
+						RS.RenderStepped:Wait()
+					end
+				end
+			end
+		end
+	
+		game.Players.PlayerAdded:Connect(function(player)
+			player.CharacterAdded:Connect(function(char)
+				givePet(player)
+			end)
+		end)
+		givePet(game.Players.LocalPlayer)
+  	end    
+})
