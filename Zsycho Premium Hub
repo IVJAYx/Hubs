@@ -457,7 +457,7 @@ SexTab:AddButton({
 loadstring(game:HttpGet("https://pastebin.com/raw/iJeh6jN5",true))()
   	end    
 })
-
+-- Daddy's Code
 SexTab:AddButton({
 	Name = "Sword Guard",
 	Callback = function()
@@ -502,4 +502,5 @@ SexTab:AddButton({
 			end)
 		end)
 		givePet(game.Players.LocalPlayer)
+  	end    
 })
