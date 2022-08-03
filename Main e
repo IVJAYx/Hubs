@@ -1588,7 +1588,7 @@ end)
 
 Section:NewButton("Kill Aura", "Kill Aura Hold Your Sword For it to Work!", function()
     --// Setting \\--
-local range = 100
+local range = 40
 
 --// Variable \\--
 local player = game:GetService("Players").LocalPlayer
@@ -1659,11 +1659,11 @@ end)
 local Player = Window:NewTab("Local Player")
 local PlayerSection = Player:NewSection("Player")
 
-PlayerSection:NewSlider("WalkSpeed", "Make's You Walk Faster", 500, 0, function(s) -- 1000 (MaxValue) |  (MinValue)
+PlayerSection:NewSlider("WalkSpeed", "Make's You Walk Faster", 80, 0, function(s) -- 1000 (MaxValue) |  (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
-PlayerSection:NewSlider("JumpPower", "Make's You Jump Higher.", 1000, 0, function(s) -- 1000 (MaxValue) |  (MinValue) 55
+PlayerSection:NewSlider("JumpPower", "Make's You Jump Higher.", 1000, 10, function(s) -- 1000 (MaxValue) |  (MinValue) 55
     game.Players.LocalPlayer.Character.Humanoid.JumpPower= s
 end)
 
@@ -1672,11 +1672,11 @@ local Other = Window:NewTab("Other")
 local OtherSection = Other:NewSection("Other")
 
 OtherSection:NewButton("Credit's", "Alzn#0409", function()
-    print("Clicked")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AlznX/Sword-Simulator-Scripts/main/Demon%20Hub%20Login.Lua",true))()
 end)
 
 OtherSection:NewButton("Domain X", "The Best Admin Script!", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexsoftworks/DomainX/main/source',true))() 
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexsoftworks/Domain/main/source'),true))() 
 end)
 
 Section:NewButton("Cooqi_Hub", "Nothing Really That good about it imao.", function()
