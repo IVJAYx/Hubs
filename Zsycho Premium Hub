@@ -461,8 +461,7 @@ loadstring(game:HttpGet("https://pastebin.com/raw/iJeh6jN5",true))()
 SexTab:AddButton({
 	Name = "Sword Guard",
 	Callback = function()
-   -- You Love!
-local sword = game:GetService("Players").LocalPlayer.Backpack.sword
+      		local sword = game:GetService("Players").LocalPlayer.Backpack.S8
 		local Handle = sword.Handle
 	
 		local RS = game:GetService("RunService")
@@ -496,5 +495,12 @@ local sword = game:GetService("Players").LocalPlayer.Backpack.sword
 				end
 			end
 		end
+	
+		game.Players.PlayerAdded:Connect(function(player)
+			player.CharacterAdded:Connect(function(char)
+				givePet(player)
+			end)
+		end)
+		givePet(game.Players.LocalPlayer)
   	end    
 })
