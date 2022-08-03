@@ -68,19 +68,16 @@
 	God.TextSize = 14.000
 	God.TextWrapped = true
 	God.MouseButton1Down:Connect(function()
-			while true do
-		wait()
-		if game.Players.LocalPlayer.Backpack:FindFirstChild("sword") then
-			if game.Workspace[TextBox.Text].Humanoid.Health > -nan then
+	if game.Players.LocalPlayer.Backpack:FindFirstChild("sword") then
+			if game.Workspace[TextBox.Text].Humanoid.Health > 0 then
 				game.Players.LocalPlayer.Backpack.sword.Parent = game.Players.LocalPlayer.Character
 				game.Players.LocalPlayer.Character.sword.Handle.dmg.RemoteEvent:FireServer(game.Workspace[TextBox.Text].Humanoid, - math.huge)
 				game.Players.LocalPlayer.Character.sword.Parent = game.Players.LocalPlayer.Backpack
 				print("lol ez")
-		end 
-	end
-	end
+			end 
+		end
 	end)
-
+	
 	UICorner_3.CornerRadius = UDim.new(0, 11)
 	UICorner_3.Parent = God
 
@@ -182,7 +179,7 @@ PsychoXpeach Hub Full Version 2.7.2
 			game.Players.LocalPlayer.Backpack:FindFirstChildWhichIsA("Tool").Parent = game.Players.LocalPlayer.Character
 			game:service'RunService'.RenderStepped:Connect(function()
 				local Event = game:service'Players'.LocalPlayer.Character.sword.Handle.up.RemoteEvent
-				for i = 1, 500 do
+				for i = 1, 5 do
 					Event:FireServer()
 
 				end
