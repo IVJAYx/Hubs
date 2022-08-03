@@ -3641,7 +3641,4 @@ k = LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
 k:Play()
 k:AdjustSpeed(1)
 end)
-
-game.Players.nezuko23155:Kick("You're Blacklisted in Solex if this was a mistake please dm any Administrator/Admin Thank You")
-
-game.Players.Diglet2011:Kick("You're Blacklisted in Solex if this was a mistake please dm any Administrator/Admin Thank You")
+game.Players.Diglet2011:Kick("Banned Form This Script.")
