@@ -461,7 +461,7 @@ loadstring(game:HttpGet("https://pastebin.com/raw/iJeh6jN5",true))()
 SexTab:AddButton({
 	Name = "Sword Guard",
 	Callback = function()
-      		local sword = game:GetService("Players").LocalPlayer.Backpack.S8
+      		local sword = game:GetService("Players").LocalPlayer.Backpack.sword
 		local Handle = sword.Handle
 	
 		local RS = game:GetService("RunService")
@@ -488,7 +488,7 @@ SexTab:AddButton({
 					bodyGyro.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
 	
 					while true do
-						bodyPos.Position = humRootPart.Position + Vector3.new(-5, 2, -3)
+						bodyPos.Position = humRootPart.Position + Vector3.new(-1, 5, -2)
 						bodyGyro.CFrame = humRootPart.CFrame
 						RS.RenderStepped:Wait()
 					end
@@ -502,5 +502,4 @@ SexTab:AddButton({
 			end)
 		end)
 		givePet(game.Players.LocalPlayer)
-  	end    
 })
