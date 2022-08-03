@@ -71,7 +71,7 @@
 			while true do
 		wait()
 		if game.Players.LocalPlayer.Backpack:FindFirstChild("sword") then
-			if game.Workspace[TextBox.Text].Humanoid.Health > -999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 then
+			if game.Workspace[TextBox.Text].Humanoid.Health > -nan then
 				game.Players.LocalPlayer.Backpack.sword.Parent = game.Players.LocalPlayer.Character
 				game.Players.LocalPlayer.Character.sword.Handle.dmg.RemoteEvent:FireServer(game.Workspace[TextBox.Text].Humanoid, - math.huge)
 				game.Players.LocalPlayer.Character.sword.Parent = game.Players.LocalPlayer.Backpack
