@@ -1,11 +1,11 @@
-local A_1 = game.Players.LocalPlayer.name.." [Alzn's Zsycho Premium Hub 0.2]"-----message here
+local A_1 = game.Players.LocalPlayer.name.." [Alzn's Zsycho Premium Hub 0.3]"-----message here
 local A_2 = "All"
 local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
 Event:FireServer(A_1, A_2)
 -----message -----
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Zsycho Premium Hub 0.2", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Zsycho Premium Hub 0.3", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
 	Name = "Main",
@@ -421,3 +421,32 @@ for i, sword in pairs(swords) do
 end
   	end    
 })
+-- Other Codeing
+local SexTab = Window:MakeTab({
+	Name = "Other",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = true
+})
+
+
+SexTab:AddButton({
+	Name = "EliteLoopKill ON",
+	Callback = function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/JhHFzD9N'))()
+  	end    
+})
+
+SexTab:AddButton({
+	Name = "EliteLoopKill OFF",
+	Callback = function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/n2i9fwjb'))()
+  	end    
+})
+
+SexTab:AddButton({
+	Name = "God Giver",
+	Callback = function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/ntmzQMmw'))()
+  	end    
+})
+
