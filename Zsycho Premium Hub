@@ -807,25 +807,9 @@ while wait() do
   statsParagraph:Set(updateStr)
 end
 
-MiscTab:AddButton({
-	Name = "Farm",
+JTab:AddButton({
+	Name = "Button!",
 	Callback = function()
-      	 local Event = game:service'Players'.LocalPlayer.Character.sword.Handle.up.RemoteEvent
-game:service'RunService'.RenderStepped:Connect(function()
-for i = 1, 7 do
-Event:FireServer()
-end
-end)
-if Character:FindFirstChild("sword") then
-
-while wait() do
-Character.sword.Handle.up.RemoteEvent:FireServer()
-if not Character:FindFirstChild("sword") then
-for _,v in pairs(Backpack:GetChildren()) do
-Humanoid:EquipTool(v)
-end
-end
-end
-end
-end    
+      		print("button pressed")
+  	end    
 })
