@@ -807,7 +807,7 @@ while wait() do
   statsParagraph:Set(updateStr)
 end
 
-JTab:AddButton({
+MiscTab:AddButton({
 	Name = "Farm",
 	Callback = function()
       	 local Event = game:service'Players'.LocalPlayer.Character.sword.Handle.up.RemoteEvent
@@ -827,5 +827,5 @@ end
 end
 end
 end
-  	end    
+end    
 })
