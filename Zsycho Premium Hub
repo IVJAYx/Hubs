@@ -806,3 +806,27 @@ while wait() do
   local updateStr = "Sword Count: "..#getAllSwords().."\nPower: "..game.Players.LocalPlayer.leaderstats.Power.Value
   statsParagraph:Set(updateStr)
 end
+
+cTab:AddToggle({
+	Name = "Farm",
+	Default = false,
+	Callback = function(Value)
+		 local Event = game:service'Players'.LocalPlayer.Character.sword.Handle.up.RemoteEvent
+game:service'RunService'.RenderStepped:Connect(function()
+for i = 1, 7 do
+Event:FireServer()
+end
+end)
+if Character:FindFirstChild("sword") then
+
+while wait() do
+Character.sword.Handle.up.RemoteEvent:FireServer()
+if not Character:FindFirstChild("sword") then
+for _,v in pairs(Backpack:GetChildren()) do
+Humanoid:EquipTool(v)
+end
+end
+end
+end
+	end    
+})
