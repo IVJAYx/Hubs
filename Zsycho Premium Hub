@@ -806,10 +806,3 @@ while wait() do
   local updateStr = "Sword Count: "..#getAllSwords().."\nPower: "..game.Players.LocalPlayer.leaderstats.Power.Value
   statsParagraph:Set(updateStr)
 end
-
-JTab:AddButton({
-	Name = "Button!",
-	Callback = function()
-      		print("button pressed")
-  	end    
-})
