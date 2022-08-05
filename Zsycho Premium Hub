@@ -807,7 +807,7 @@ while wait() do
   statsParagraph:Set(updateStr)
 end
 
-cTab:AddToggle({
+JTab:AddToggle({
 	Name = "Farm",
 	Default = false,
 	Callback = function(Value)
