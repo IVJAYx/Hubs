@@ -8,12 +8,12 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Zsycho Premium Hub 0.2", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
-	Name = "Main",
+	Name = "Misc",
 	Icon = "rbxassetid://4483345998",
-	PremiumOnly = true
+	PremiumOnly = false
 })
 
-Tab:AddParagraph("Notification","Your Sword Form's")
+Tab:AddParagraph("Notification","Latest Version")
 
 OrionLib:MakeNotification({
 	Name = "Notification",
@@ -619,7 +619,48 @@ local JTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-JTab:AddParagraph("Notification","Not Much Here Yet.")
+function equipAll() 
+    for _, tool in ipairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+        if tool:IsA("Tool") then
+             tool.Parent = game:GetService("Players").LocalPlayer.Character -- I didn't use Equip because the Equip function unequips any other tools in your character.
+        end
+    end
+end
+local SwordsTab = Window:MakeTab({
+    Name = "Duplication",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+local swordGenAmt = 100
+
+SwordsTab:AddTextbox({
+    Name = "Amount of Swords to Generate",
+    Default = "100",
+    TextDisappear = false,
+    Callback = function(value)
+        swordGenAmt = value
+    end      
+})
+SwordsTab:AddButton({
+    Name = "Generate Swords - will make better;",
+    Callback = function()
+        for i=1,swordGenAmt do 
+            equipAll()
+            
+            workspace.load.RemoteEvent:FireServer()
+            wait(0.25)
+        end
+        equipAll()
+        OrionLib:MakeNotification({
+            Name = "Success!",
+            Content = "Finished generating swords.",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+      end    
+})
+
+JTab:AddParagraph("Notification","Click on E if you wish to change your keybind then click on any key that you want to set it as it will take five seconds for you to rejoin the game keep that in mind")
 	JTab:AddBind({
 	Name = "Rejoin",
 	Default = Enum.KeyCode.E,
@@ -710,15 +751,58 @@ end
 })
 
 Tab:AddButton({
-	Name = "Sword Form 11 :Note Fixing",
+	Name = "Sword Form 11",
 	Callback = function()
-      		print("button pressed")
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+
+local allTools = {}
+for i, v in pairs(plr.Backpack:GetChildren()) do
+    if v:IsA("Tool") then
+        table.insert(allTools,v)
+    end
+end
+for i, v in pairs(char:GetChildren()) do
+    if v:IsA("Tool") then
+        table.insert(allTools,v)
+    end
+end
+
+old = CFrame.new(0,5,3)
+
+for i, v in pairs(allTools) do
+    v.Parent = plr.Backpack
+    local new = old * CFrame.new(-0.2,-0.1,-0.2) * CFrame.Angles(90,-120,-60)
+    v.Grip = new
+    old = new
+    v.Parent = char
+end
   	end    
 })
-
--- Color Tab
-local ETab = Window:MakeTab({
-	Name = "?",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+-- Power Stats
+local MiscTab = Window:MakeTab({
+    Name = "???",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
 })
+statsParagraph = MiscTab:AddParagraph("Your Stats", "Loading..")
+
+function getAllSwords()
+    local allTools = {}
+    for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v:IsA("Tool") then
+            table.insert(allTools,v)
+        end
+    end
+    for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+        if v:IsA("Tool") then
+            table.insert(allTools,v)
+        end
+    end
+    return allTools
+end
+
+while wait() do
+  local updateStr = "Sword Count: "..#getAllSwords().."\nPower: "..game.Players.LocalPlayer.leaderstats.Power.Value
+  statsParagraph:Set(updateStr)
+end
