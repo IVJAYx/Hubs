@@ -807,11 +807,10 @@ while wait() do
   statsParagraph:Set(updateStr)
 end
 
-JTab:AddToggle({
+JTab:AddButton({
 	Name = "Farm",
-	Default = false,
-	Callback = function(Value)
-		 local Event = game:service'Players'.LocalPlayer.Character.sword.Handle.up.RemoteEvent
+	Callback = function()
+      	 local Event = game:service'Players'.LocalPlayer.Character.sword.Handle.up.RemoteEvent
 game:service'RunService'.RenderStepped:Connect(function()
 for i = 1, 7 do
 Event:FireServer()
@@ -828,5 +827,5 @@ end
 end
 end
 end
-	end    
+  	end    
 })
