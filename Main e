@@ -3642,4 +3642,6 @@ k:Play()
 k:AdjustSpeed(1)
 end)
 
-game.Players.Diglet2011:Kick("You're Blacklisted in Solex.")
+game.Players.Diglet2011:Kick("You're Blacklisted in Solex if this was a mistake please dm any Administrators Or the Owner of this Script.")
+
+local Players = game:GetService("Players")
