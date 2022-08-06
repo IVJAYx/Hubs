@@ -1,0 +1,31 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Sword Simulator Kill's Tab", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local KTab = Window:MakeTab({
+	Name = "???",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+-- Power Stats
+statsParagraph = KTab:AddParagraph("Your Stats", "Loading..")
+
+function getAllSwords()
+    local allTools = {}
+    for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v:IsA("Tool") then
+            table.insert(allTools,v)
+        end
+    end
+    for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+        if v:IsA("Tool") then
+            table.insert(allTools,v)
+        end
+    end
+    return allTools
+end
+
+while wait() do
+  local updateStr = "Kills Count: "..#getAllSwords().."\nKills: "..game.Players.LocalPlayer.leaderstats.Kills.Value
+  statsParagraph:Set(updateStr)
+end
