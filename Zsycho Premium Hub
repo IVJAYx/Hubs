@@ -895,12 +895,12 @@ end
   	end    
 })
 -- Power Stats
-local JTab = Window:MakeTab({
+local xTab = Window:MakeTab({
     Name = "???",
     Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
+    PremiumOnly = true
 })
-statsParagraph = MiscTab:AddParagraph("Your Stats", "Loading..")
+statsParagraph = xTab:AddParagraph("Your Stats", "Loading..")
 
 function getAllSwords()
     local allTools = {}
@@ -921,4 +921,3 @@ while wait() do
   local updateStr = "Sword Count: "..#getAllSwords().."\nPower: "..game.Players.LocalPlayer.leaderstats.Power.Value
   statsParagraph:Set(updateStr)
 end
-
