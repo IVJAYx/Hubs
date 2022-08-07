@@ -660,7 +660,7 @@ SwordsTab:AddButton({
       end    
 })
 
-JTab:AddButton({
+pTab:AddButton({
 	Name = "Server Crasher",
 	Callback = function()
     	local e = 0
@@ -676,7 +676,7 @@ JTab:AddButton({
   	end    
 })
 
-JTab:AddButton({
+pTab:AddButton({
 	Name = "Sword Wall",
 	Callback = function()
     	local p = 0
@@ -730,7 +730,7 @@ end
   	end    
 })
 
-JTab:AddButton({
+pTab:AddButton({
 	Name = "Sword Box",
 	Callback = function()
     local p = 0
