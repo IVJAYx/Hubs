@@ -895,7 +895,7 @@ end
   	end    
 })
 -- Power Stats
-local MiscTab = Window:MakeTab({
+local JTab = Window:MakeTab({
     Name = "???",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
