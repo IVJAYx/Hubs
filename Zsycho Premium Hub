@@ -664,7 +664,7 @@ JTab:AddButton({
 	Name = "Server Crasher",
 	Callback = function()
     	local e = 0
-	for i = 1, 300000 do
+	for i = 1, 100000 do
 		local v1 = 'Black'
 		local event = game:GetService("Workspace").eff.RemoteEvent
 		event:FireServer(v1)
