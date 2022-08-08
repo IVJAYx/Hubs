@@ -3521,7 +3521,7 @@ local Tab = Window:NewTab("Premium Hub")
 local TabSection = Tab:NewSection("Sword Form's Beta.")
 
 -- Evil Script.
-TabSection:NewButton("Zsycho Premium Hub 0.2", ":)", function()
+TabSection:NewButton("Solex Premium Hub 0.2", ":)", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Demon1131/Hubs/main/Zsycho%20Premium%20Hub",true))()
 end)
 
